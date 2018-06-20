@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery Hiding Demo</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$("#hide").click(function(){
+				/* $("p").hide("slow") */
+				$("p").hide(1000,function(){alert("Your Element is Hidden")})
+			});
+			
+			$("#show").click(function(){
+				$("p").show(1000)
+			});
+			
+			$("#toggle").click(function(){
+				$("p").toggle(1000)
+			});
+			$("#radio").click(function(){
+				$("#rd").toggle("slow")
+			});
+			$("#bt1").click(function(){
+				$("#div1").fadeOut("slow")
+			});
+			$("#bt2").click(function(){
+				$("#div1").fadeIn("slow")
+			});
+			$("#bt3").click(function(){
+				$("#div1").fadeTo("slow",0.7)
+			});
+			$("#div1").mouseover(function(){
+				$("#div1").fadeTo("slow",0.5)
+			});
+			$("#div1").mouseout(function(){
+				$("#div1").fadeTo("normal",1)
+			});
+			$("#bt4").click(function(){
+				$("#div1").fadeToggle("slow")
+			});
+		});
+	</script>
+	
+</head>
+<body>
+	<div class="container" style="margin-top:20px">
+		<!-- <p style="display:none">Welcome to JQuery World</p> -->
+		<h3>
+			<p>Welcome to JQuery World</p>
+		</h3>
+		<input type="button" class="btn btn-danger btn-md" id="hide" value="Hide">
+		<input type="button" class="btn btn-success btn-md" id="show" value="Show">
+		<input type="button" class="btn btn-primary btn-md" id="toggle" value="Toggle">
+		<input type="button" class="btn btn-primary btn-md" id="radio" value="Toggle"><br><br>
+		Male<input type="radio" id="rd"> <br>
+		<div id="div1" style="width:200px;height:200px;background-color:red">
+		</div>
+		<button id="bt1" class="btn btn-primary btn-md">Fade Out</button>
+		<button id="bt2" class="btn btn-primary btn-md">Fade In</button>
+		<button id="bt3" class="btn btn-primary btn-md">Fade To</button>
+		<button id="bt4" class="btn btn-primary btn-md">Fade Toggle</button>
+		
+	</div>
+</body>
+</html>

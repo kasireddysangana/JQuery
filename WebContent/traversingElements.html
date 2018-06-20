@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$("button").clickfunction(){
+			$("#p1").parent("body").css({'border':'2px solid','display':'block','color':'yellow'});
+		});
+	</script>
+</head>
+<body>
+	<div>
+		<div id="first">
+			<p id="p1"> This is first line</p>
+		</div>
+		<div id="second" style="border:2px solid; color:green; display:block">
+			<p id="p2">This is second line</p>
+		</div>	
+	</div><br>
+	<button>Show Lines</button>
+</body>
+</html>

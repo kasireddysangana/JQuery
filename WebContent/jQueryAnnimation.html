@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery Animation Demo</title>
+	
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#bt1").click(function(){
+				$("#div1").animate({left:'500px',width:'400px',height:'400px'},"slow")	
+			});	
+			$("#bt2").click(function(){
+				$("#img1").animate({left:'500px',width:'400px',height:'400px'},"slow")	
+			});
+			$("#img1").mouseover(function(){
+				$("#img1").animate({left:'500px',width:'400px',height:'400px'},"slow")	
+			});
+			$("#img1").mouseout(function(){
+				$("#img1").animate({left:'0px',width:'100px',height:'100px'},"slow")	
+			});
+		});
+		
+	
+	</script>
+</head>
+<body>
+	<div class="container">
+		<br>
+		
+		<button id="bt1" class="btn btn-primary btn-md">Move</button>
+		<button id="bt2" class="btn btn-primary btn-md">Move Image</button>
+		<hr>
+		<br>
+		<!-- <div id="div1" style="background-color:red;height:100px;width:100px;position:absolute"> </div> -->
+		<br>
+		
+			<img id="img1" src="./images/kasi.jpg" height=100px width=100px>
+		
+	</div>		
+</body>
+</html>

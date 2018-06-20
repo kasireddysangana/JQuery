@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery HTML Elements - addClass</title>	
+ 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+	
+	<style>
+		.first{
+			width:300px;
+			height:300px;
+			background-color:lightblue;
+		}
+		.second{
+			font-family:courier;
+			font-size:40px;
+			color:red;
+		}
+	</style>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			
+			$("#div1").addClass("first");
+			
+			$("p").addClass("second");
+			
+			$("#btn1").click(function(){
+				$("p").removeClass("second");
+			});
+			$("#btn2").click(function(){
+				$("p").addClass("second");
+			});
+			$("#btn3").click(function(){
+				$("p").toggleClass();
+			});
+			$("#btn4").click(function(){
+				$("p").css({'font-family':'arial','font-size':'32px','color':'blue','background-color':'red'});
+			});
+		});
+	</script>
+</head>
+<body>
+	<p class="second"> This is a normal text </p>
+	<div id='div1'></div>
+	<br>
+	<button class="btn btn-danger" id="btn1">Remove Style</button>
+	<button class="btn btn-info" id="btn2">Add Style</button>
+	<button class="btn btn-primary" id="btn3">Add Style</button>
+	<button class="btn btn-primary" id="btn4">Add CSS</button>
+</body>
+</html>

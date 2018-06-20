@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Append,Prepend,Before,After Demos</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$("#btn1").click(function(){
+				$("#select1").append("<option>"+$("#txt1").val()+"</option>");	
+			});
+			$("#btn2").click(function(){
+				$("#select1").prepend("<option>"+$("#txt1").val()+"</option>");	
+			});
+			$("#para1").click(function(){
+				$(this).remove();
+			});
+			$("#para2").click(function(){
+				$(this).remove();
+			});
+			$("#btn3").click(function(){
+				$("#div1").remove();
+			});
+			$("#btn4").click(function(){
+				$("#div1").empty();
+			});
+		});	
+	</script>
+</head>
+<body>
+	<div class="container">
+		<br>
+		
+		<input type="text" id="txt1"/>
+		<select id="select1" size=3>
+			<option>One</option>
+			<option>Two</option>
+			<option>Three</option>
+		</select><br>
+		<button id="btn1">AppendText</button>
+		<button id="btn2">AppendText</button><br>
+		<br>
+		<p id="para1" style="color:red">Click to Delete me</p>
+		<p id="para2" style="color:blue">Click to Delete me</p> 
+		<button id="btn3">Delete</button>
+		<button id="btn4">Empty</button>
+		<div id="div1" style="background-color:lightyellow;border:solid;width:300px;height:100px">
+			<p id="para3">This is First Paragraph</p>
+			<p id="para4">This is Second Paragraph</p>
+		</div>
+	</div>
+</body>
+</html>

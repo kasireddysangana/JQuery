@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery Sliding Demo</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+	</script>
+	
+	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$("#bt1").click(function(){
+				$("#div1").slideDown("slow")
+			});
+			$("#bt2").click(function(){
+				$("#div1").slideUp("slow")
+			});
+			
+			$("#bt3").click(function(){
+				$("#image1").slideDown("slow")
+			});
+			$("#bt4").click(function(){
+				$("#image1").slideUp("slow")
+			});
+			$("#bt5").click(function(){
+				$("#image1").slideToggle("slow")
+			});
+			$("#bt6").click(function(){
+				$("#image1").slideUp(3000).slideDown(3000)
+			});
+			
+		});
+		</script>
+</head>
+<body>
+	<div class="container">
+		<p> Press Button to show the Paragraphs </p>
+		<div id="div1" style="display:none">
+			<p>This is First Line of Text</p>
+			<p>This is Second Line of Text</p>
+			<p>This is Third Line of Text</p>
+			<p>This is Fourth Line of Text</p>
+		</div>
+		<button id="bt1" class="btn btn-success btn-md">Slide Down</button>
+		<button id="bt2" class="btn btn-danger btn-md">Slide Up</button>
+		<br>
+		<hr>
+		
+		<div id="image1" style="display:none">
+			<img src="./images/kasi.jpg">
+		</div>
+		<br>
+		<button id="bt3" class="btn btn-success btn-md">Image Slide Down</button>
+		<button id="bt4" class="btn btn-danger btn-md">Image Slide Up</button>
+		<button id="bt5" class="btn btn-danger btn-md">Image Slide Toggle</button>
+		<button id="bt6" class="btn btn-danger btn-md">Image Slide Chanining</button>
+	</div>
+</body>
+</html>

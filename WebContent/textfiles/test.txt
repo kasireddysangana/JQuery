@@ -1,0 +1,4 @@
+<h2 style="text-align:center;color:green>
+	Welcome to JQuery Ajax
+</h2>
+<p>Hi How are you</p>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery Effects Demo</title>
+	<!-- <script src="./js/jquery-3.3.1.min.js"></script> -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script type="text/javascript">
+		
+		$(document).ready(function()
+		{
+			$("#bt1").click(function(){
+				$("#image1").slideDown(5000)
+			});
+			$("#bt2").click(function(){
+				$("#image1").slideUp(5000)
+			});
+			$("#bt3").click(function(){
+				$("#image1").stop()
+			});
+			$("#bt4").click(function(){
+				$("#div1").slideDown(7000)
+			});
+			$("#bt5").click(function(){
+				$("#div1").stop()
+			});
+			
+		});
+	</script>
+</head>
+<body>
+	<div class="container">
+		<div id="image1" style="display:none">
+			<img src="./images/kasi.jpg">
+		</div>
+		<br>
+		<button id="bt1" class="btn btn-success btn-md">Image Slide Down</button>
+		<button id="bt2" class="btn btn-info btn-md">Image Slide Up</button>
+		<button id="bt3" class="btn btn-danger btn-md">Stop</button>
+		
+		<div id="div1" style="display:none;height:200px;background-color:red;text-align:center;color:green">
+			This test will be stopped.<br>
+			This test will be stopped.<br>
+			This test will be stopped.<br>
+		</div>
+		<br>
+		<button id="bt4" class="btn btn-danger btn-md">Slide Down</button>
+		<button id="bt5" class="btn btn-danger btn-md">Stop</button>
+	</div>
+</body>
+</html>

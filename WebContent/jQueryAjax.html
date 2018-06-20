@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>JQuery AJAX</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	
+ 	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$("button").click(function(){
+				$("p").load("test1.txt")
+			});
+		});
+	</script>
+
+</head>
+<body>
+	<script type="text/javascript">
+		document.write(new Date());
+	</script>
+	<p><h2>Let jQuery AJAX Change This Text</h2></p>
+	<button>Get External Content</button>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>HTML Elements Traversal</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ 	<script type="text/javascript">
+		$(document).ready(function()
+		{
+			$("#p1").parent().css({'border':'2px solid','display':'block','color':'red'});
+		)};
+	</script>
+	
+</head>
+<body>
+	<div id="first">
+		<p id="p1"> This is first line</p>
+	</div>
+	<div id="second">
+		<p id="p2">This is second line</p>
+	</div>	
+</body>
+</html>
